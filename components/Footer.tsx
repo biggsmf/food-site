@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-cream/60 text-sm">
-          <p>{FOOTER.copyright}</p>
+          <p>© {currentYear} Roots & Harvest. All rights reserved.</p>
         </div>
       </div>
     </footer>
