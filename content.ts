@@ -125,7 +125,7 @@ export const CONTACT = {
   badge:          'Get in Touch',
   heading:        'Order Direct.\nTalk to Us.',
   subtext:        'No middlemen. Message us directly on WhatsApp or send a quick note below — we reply within the day.',
-  whatsappNumber: '12687246624',   // Format: country code + number, no spaces
+  whatsappNumber: '12687211140',   // Format: country code + number, no spaces
   whatsappGreeting: 'Hello! I found you on your website and I\'d like to place an order.',
   email:          'hello@rootsandharvest.ag',
   address:        'Antigua & Barbuda, West Indies',
