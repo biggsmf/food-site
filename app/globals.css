@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-earth-500: #c07a20;
+    --color-forest-500: #3d7535;
+    --color-terracotta: #c94a28;
+    --color-cream: #fef9f0;
+    --color-ink: #1a1208;
+    --color-earth-900: #6b4510;
+    --color-forest-900: #1d4420;
+  }
+
+  body {
+    @apply bg-cream text-ink;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32 px-4 md:px-8;
+  }
+
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-earth-500 text-cream rounded-lg font-semibold hover:bg-earth-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-forest-500 text-cream rounded-lg font-semibold hover:bg-forest-600 transition-colors;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-earth-500);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-earth-900);
+}
