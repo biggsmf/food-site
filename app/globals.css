@@ -3,58 +3,57 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-earth-500: #c07a20;
-    --color-forest-500: #3d7535;
-    --color-terracotta: #c94a28;
-    --color-cream: #fef9f0;
-    --color-ink: #1a1208;
-    --color-earth-900: #6b4510;
-    --color-forest-900: #1d4420;
+  html { scroll-behavior: smooth; }
+
+  body { @apply bg-cream text-ink; }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), Georgia, serif;
   }
 
-  body {
-    @apply bg-cream text-ink;
+  ::selection {
+    background: #c07a20;
+    color: #fef9f0;
   }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #fef9f0; }
+  ::-webkit-scrollbar-thumb { background: #c07a20; border-radius: 3px; }
 }
 
 @layer components {
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32 px-4 md:px-8;
-  }
-
-  .container-max {
-    @apply max-w-6xl mx-auto;
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold tracking-widest uppercase bg-earth-100 text-earth-700 border border-earth-200;
+    font-family: var(--font-body);
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-earth-500 text-cream rounded-lg font-semibold hover:bg-earth-600 transition-colors;
+    @apply inline-flex items-center gap-2 px-8 py-4 font-bold tracking-wider uppercase text-sm bg-earth-500 text-cream hover:bg-earth-600 transition-all duration-300 border-2 border-earth-500 hover:border-earth-600;
+    font-family: var(--font-body);
   }
 
-  .btn-secondary {
-    @apply px-6 py-3 bg-forest-500 text-cream rounded-lg font-semibold hover:bg-forest-600 transition-colors;
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 font-bold tracking-wider uppercase text-sm bg-transparent text-earth-600 border-2 border-earth-500 hover:bg-earth-500 hover:text-cream transition-all duration-300;
+    font-family: var(--font-body);
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-3 px-8 py-4 font-bold tracking-wide uppercase text-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300;
+    font-family: var(--font-body);
+  }
+
+  .product-card {
+    @apply bg-white border border-earth-100 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+    box-shadow: 0 4px 24px rgba(26,18,8,0.08);
+  }
+
+  .img-placeholder {
+    @apply relative overflow-hidden bg-gradient-to-br from-earth-100 to-forest-100 flex items-center justify-center;
   }
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-earth-500);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-earth-900);
+@layer utilities {
+  .font-display { font-family: var(--font-display), Georgia, serif; }
+  .font-body    { font-family: var(--font-body), system-ui, sans-serif; }
+  .font-accent  { font-family: var(--font-accent), cursive; }
 }
